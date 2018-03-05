@@ -4,14 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.quoctuan.lazadaapp.view.splash.home.HomeActivity">
+    tools:context=".view.home.HomeActivity">
 
-    <TextView
-        android:text="Trang chủ"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:layout_centerInParent="true"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:background="@color/bgToolbar"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:logo="@drawable/logo"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/bgsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:drawableLeft="@drawable/ic_search"
+                    android:background="@android:color/white"
+                    android:text="@string/str_btn_search"
+                    android:gravity="left|center_vertical"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/bgToolbar"/>
+
+                <ImageButton
+                    android:src="@drawable/ic_camera"
+                    android:background="@android:color/white"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
 </RelativeLayout>
