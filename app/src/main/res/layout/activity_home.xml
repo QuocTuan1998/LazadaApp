@@ -8,58 +8,77 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:background="@color/bgToolbar"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/bgToolbar">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                app:logo="@drawable/logo"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"/>
+                android:layout_height="?attr/actionBarSize"
+                app:logo="@drawable/logo" />
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/bgsearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:orientation="horizontal">
+
                 <Button
-                    android:drawableLeft="@drawable/ic_search"
-                    android:background="@android:color/white"
-                    android:text="@string/str_btn_search"
-                    android:gravity="left|center_vertical"
-                    android:textSize="20sp"
-                    android:textAllCaps="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:background="@android:color/white"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/str_btn_search"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="false"
+                    android:textSize="20sp" />
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginRight="5dp"
-                    android:background="@color/bgToolbar"/>
+                    android:layout_marginTop="10dp"
+                    android:background="@color/bgToolbar" />
 
                 <ImageButton
-                    android:src="@drawable/ic_camera"
-                    android:background="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:background="@android:color/white"
+                    android:src="@drawable/ic_camera" />
 
             </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab"
+                app:tabTextColor="@color/gray"
+                app:tabTextAppearance="@style/capfalse"
+                app:tabMode="scrollable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.design.widget.TabLayout>
 
         </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>

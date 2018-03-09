@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="bgToolbar">#183545</color>
     <color name="bgLogo">#f67122</color>
+    <color name="gray">#ccc</color>
 </resources>
