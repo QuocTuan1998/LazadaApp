@@ -2,5 +2,9 @@
     <string name="app_name">LazadaApp</string>
     <string name="str_bag">thế giới mua sắm trong tầm tay bạn</string>
     <string name="str_iconmoney">giao hàng tận nơi thanh toán dễ dàng</string>
-    <string name="str_iconsercurity">100% bảo vệ người tiêu dùng</string>
+    <string name="str_iconsercurity">cam kết 100% bảo vệ người tiêu dùng</string>
+    <string name="str_btn_search">tìm kiếm trên lazada</string>
+    <string name="open">Mở</string>
+    <string name="close">Đóng</string>
+
 </resources>

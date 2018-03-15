@@ -5,7 +5,22 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#f67122</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+    
+    <style name="menuitemcolor" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/bgToolbar</item>
+        <item name="drawerArrowStyle">@style/changcolordrawertoggle</item>
     </style>
 
+    <style name="changcolordrawertoggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+
+    </style>
+
+    <style name="capfalse" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+    
 </resources>

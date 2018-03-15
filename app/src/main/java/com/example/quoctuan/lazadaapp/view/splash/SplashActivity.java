@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.quoctuan.lazadaapp.R;
-import com.example.quoctuan.lazadaapp.view.splash.home.HomeActivity;
+import com.example.quoctuan.lazadaapp.view.home.HomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
