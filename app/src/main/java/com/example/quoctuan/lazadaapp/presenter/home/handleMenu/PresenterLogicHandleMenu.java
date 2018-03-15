@@ -28,12 +28,12 @@ public class PresenterLogicHandleMenu implements IPresenterHandleMenu{
         List<LoaiSanPham> loaiSanPhamList;
         String dataJSON = "";
         List<HashMap<String,String> > attr = new ArrayList<>();
-        String url = "http://10.0.2.2/weblazada/loaisanpham.php";
         //GET method
         //String url = "http://10.0.2.2/weblazada/loaisanpham.php?maloaicha=0";
 
         //POST method
 
+        String url = "http://10.0.2.2/weblazada/loaisanpham.php";
         HashMap<String, String> hashMapParentCode = new HashMap<>();
         hashMapParentCode.put("maloaicha", "0");
         attr.add(hashMapParentCode);

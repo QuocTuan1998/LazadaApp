@@ -11,8 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ExpandableListView;
 
 import com.example.quoctuan.lazadaapp.R;
+import com.example.quoctuan.lazadaapp.adapter.ExpandAdapter;
 import com.example.quoctuan.lazadaapp.adapter.ViewPagerAdapter;
 import com.example.quoctuan.lazadaapp.model.object.LoaiSanPham;
 import com.example.quoctuan.lazadaapp.presenter.home.handleMenu.PresenterLogicHandleMenu;
@@ -27,7 +29,7 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
     ViewPager view_pager;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
-
+    ExpandableListView expandableListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
         tab = findViewById(R.id.tab);
         view_pager = findViewById(R.id.view_pager);
         drawerLayout = findViewById(R.id.drawer_layout);
+        expandableListView = findViewById(R.id.expand_menu);
 
         // init Toolbar
         toolbar.setTitle("");
@@ -63,6 +66,8 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         view_pager.setAdapter(adapter);
         tab.setupWithViewPager(view_pager);
+
+        // init expand listview
 
     }
 
@@ -89,6 +94,8 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
 
     @Override
     public void showMenu(List<LoaiSanPham> listLoaiSP) {
-        Log.d("List Menu",listLoaiSP.get(0).getTENLOAISP());
+        ExpandAdapter adapter = new ExpandAdapter(HomeActivity.this, listLoaiSP);
+        expandableListView.setAdapter(adapter);
+        expandableListView.deferNotifyDataSetChanged();
     }
 }
