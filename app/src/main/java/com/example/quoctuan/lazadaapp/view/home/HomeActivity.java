@@ -1,5 +1,6 @@
 package com.example.quoctuan.lazadaapp.view.home;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -8,17 +9,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 import com.example.quoctuan.lazadaapp.R;
 import com.example.quoctuan.lazadaapp.adapter.ExpandAdapter;
-import com.example.quoctuan.lazadaapp.adapter.ViewPagerAdapter;
+import com.example.quoctuan.lazadaapp.adapter.ViewPagerAdapterHome;
 import com.example.quoctuan.lazadaapp.model.object.LoaiSanPham;
 import com.example.quoctuan.lazadaapp.presenter.home.handleMenu.PresenterLogicHandleMenu;
 import com.example.quoctuan.lazadaapp.presenter.home.view.ViewHandleMenu;
+import com.example.quoctuan.lazadaapp.view.login.LoginActivity;
 
 import java.util.List;
 
@@ -63,7 +64,7 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
 
 
         //init TabLayout, ViewPager
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        ViewPagerAdapterHome adapter = new ViewPagerAdapterHome(getSupportFragmentManager());
         view_pager.setAdapter(adapter);
         tab.setupWithViewPager(view_pager);
 
@@ -88,6 +89,19 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.item_login:
+                Intent iLogin = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(iLogin);
+                break;
+        }
 
         return super.onOptionsItemSelected(item);
     }

@@ -6,5 +6,13 @@
     <string name="str_btn_search">tìm kiếm trên lazada</string>
     <string name="open">Mở</string>
     <string name="close">Đóng</string>
+    <string name="email">Email</string>
+    <string name="pass">Mật khẩu</string>
+    <string name="forget">Quên mật khẩu?</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="or_login">Hoặc đăng nhập bằng</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="login_label">Đăng nhập/Đăng ký</string>
 
 </resources>

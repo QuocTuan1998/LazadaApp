@@ -22,12 +22,12 @@ import java.util.List;
  * Created by quoctuan on 06/03/2018.
  */
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapterHome extends FragmentPagerAdapter {
 
     List<Fragment> list_fragment = new ArrayList<Fragment>();
     List<String> title_fragment = new ArrayList<String>();
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public ViewPagerAdapterHome(FragmentManager fm) {
         super(fm);
         list_fragment.add(new ElectronicFragment());
         list_fragment.add(new HotFragment());
