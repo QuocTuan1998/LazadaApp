@@ -1,4 +1,7 @@
 <resources>
+    <string name="facebook_app_id">1623122387734830</string>
+    <string name="fb_login_protocol_scheme">fb1623122387734830</string>
+
     <string name="app_name">LazadaApp</string>
     <string name="str_bag">thế giới mua sắm trong tầm tay bạn</string>
     <string name="str_iconmoney">giao hàng tận nơi thanh toán dễ dàng</string>

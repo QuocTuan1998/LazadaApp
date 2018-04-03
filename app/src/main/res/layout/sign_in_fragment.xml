@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
+        <com.example.quoctuan.lazadaapp.customview.ClearEditText
             android:id="@+id/edit_email"
             android:textColor="@android:color/black"
             android:layout_width="match_parent"
@@ -67,6 +67,7 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/btn_facebook"
             android:layout_margin="10dp"
             android:background="@drawable/custom_facebook"
             android:textColor="@color/facebook"
@@ -79,6 +80,7 @@
 
 
         <Button
+            android:id="@+id/btn_google"
             android:layout_margin="10dp"
             android:background="@drawable/custom_google"
             android:textColor="@color/google"
